@@ -2,9 +2,9 @@
 
 Implementations of the NewHope Ring-LWE-based key exchange as described
 in the [USENIX Security 2016 paper *Post-quantum key exchange -- a new hope*](https://newhopecrypto.org/resources.shtml) by 
-[Erdem Alkım](http://erdemalkim.github.io/),
+[Erdem Alkım](https://erdemalkim.github.io/),
 [Léo Ducas](https://homepages.cwi.nl/~ducas/),
-[Thomas Pöppelmann](https://tpoeppelmann.de), and
+[Thomas Pöppelmann](http://tpoeppelmann.de), and
 [Peter Schwabe](https://cryptojedi.org).
 
 ## Build instructions
