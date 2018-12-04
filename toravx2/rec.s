@@ -88,12 +88,12 @@ mov  $0,%rcx
 # qhasm: _1x8    = mem256[v1x8]
 # asm 1: vmovdqu v1x8,>_1x8=reg256#1
 # asm 2: vmovdqu v1x8,>_1x8=%ymm0
-vmovdqu v1x8,%ymm0
+vmovdqu v1x8(%rip),%ymm0
 
 # qhasm: qx8     = mem256[q8x]
 # asm 1: vmovdqu q8x,>qx8=reg256#2
 # asm 2: vmovdqu q8x,>qx8=%ymm1
-vmovdqu q8x,%ymm1
+vmovdqu q8x(%rip),%ymm1
 
 # qhasm: pgp = &pg
 # asm 1: leaq <pg=stack256#1,>pgp=int64#5
@@ -276,7 +276,7 @@ vpsubd %ymm5,%ymm9,%ymm5
 # qhasm: 8x b = tmp0 * mem256[v2730x8]
 # asm 1: vpmulld v2730x8,<tmp0=reg256#3,>b=reg256#7
 # asm 2: vpmulld v2730x8,<tmp0=%ymm2,>b=%ymm6
-vpmulld v2730x8,%ymm2,%ymm6
+vpmulld v2730x8(%rip),%ymm2,%ymm6
 
 # qhasm: 8x t = b >> 27
 # asm 1: vpsrad $27,<b=reg256#7,>t=reg256#7
@@ -351,7 +351,7 @@ vpabsd %ymm2,%ymm2
 # qhasm: 8x b = tmp1 * mem256[v2730x8]
 # asm 1: vpmulld v2730x8,<tmp1=reg256#4,>b=reg256#7
 # asm 2: vpmulld v2730x8,<tmp1=%ymm3,>b=%ymm6
-vpmulld v2730x8,%ymm3,%ymm6
+vpmulld v2730x8(%rip),%ymm3,%ymm6
 
 # qhasm: 8x t = b >> 27
 # asm 1: vpsrad $27,<b=reg256#7,>t=reg256#7
@@ -431,7 +431,7 @@ vpaddd %ymm3,%ymm2,%ymm2
 # qhasm: 8x b = tmp2 * mem256[v2730x8]
 # asm 1: vpmulld v2730x8,<tmp2=reg256#5,>b=reg256#4
 # asm 2: vpmulld v2730x8,<tmp2=%ymm4,>b=%ymm3
-vpmulld v2730x8,%ymm4,%ymm3
+vpmulld v2730x8(%rip),%ymm4,%ymm3
 
 # qhasm: 8x t = b >> 27
 # asm 1: vpsrad $27,<b=reg256#4,>t=reg256#4
@@ -511,7 +511,7 @@ vpaddd %ymm3,%ymm2,%ymm2
 # qhasm: 8x b = tmp3 * mem256[v2730x8]
 # asm 1: vpmulld v2730x8,<tmp3=reg256#6,>b=reg256#4
 # asm 2: vpmulld v2730x8,<tmp3=%ymm5,>b=%ymm3
-vpmulld v2730x8,%ymm5,%ymm3
+vpmulld v2730x8(%rip),%ymm5,%ymm3
 
 # qhasm: 8x t = b >> 27
 # asm 1: vpsrad $27,<b=reg256#4,>t=reg256#4

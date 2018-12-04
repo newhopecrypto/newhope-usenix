@@ -78,12 +78,12 @@ mov  %rdx,%rdx
 # qhasm: q = mem256[q8]
 # asm 1: vmovdqu q8,>q=reg256#1
 # asm 2: vmovdqu q8,>q=%ymm0
-vmovdqu q8,%ymm0
+vmovdqu q8(%rip),%ymm0
 
 # qhasm: qinv = mem256[qinv16]
 # asm 1: vmovdqu qinv16,>qinv=reg256#2
 # asm 2: vmovdqu qinv16,>qinv=%ymm1
-vmovdqu qinv16,%ymm1
+vmovdqu qinv16(%rip),%ymm1
 
 # qhasm: ctri = 256
 # asm 1: mov  $256,>ctri=int64#4
