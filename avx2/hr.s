@@ -98,12 +98,12 @@ mov  $0,%rcx
 # qhasm: _1x8    = mem256[v1x8]
 # asm 1: vmovdqu v1x8,>_1x8=reg256#1
 # asm 2: vmovdqu v1x8,>_1x8=%ymm0
-vmovdqu v1x8,%ymm0
+vmovdqu v1x8(%rip),%ymm0
 
 # qhasm: qx8     = mem256[q8x]
 # asm 1: vmovdqu q8x,>qx8=reg256#2
 # asm 2: vmovdqu q8x,>qx8=%ymm1
-vmovdqu q8x,%ymm1
+vmovdqu q8x(%rip),%ymm1
 
 # qhasm: looptop:
 ._looptop:
@@ -111,7 +111,7 @@ vmovdqu q8x,%ymm1
 # qhasm: rshifts = mem256[vrshiftsx8]
 # asm 1: vmovdqu vrshiftsx8,>rshifts=reg256#3
 # asm 2: vmovdqu vrshiftsx8,>rshifts=%ymm2
-vmovdqu vrshiftsx8,%ymm2
+vmovdqu vrshiftsx8(%rip),%ymm2
 
 # qhasm: 32x rbit = mem8[input_2 + ctr + 0]
 # asm 1: vpbroadcastb 0(<input_2=int64#3,<ctr=int64#4),>rbit=reg256#4
@@ -676,7 +676,7 @@ vpxor %ymm11,%ymm6,%ymm6
 # qhasm: _3x8 = mem256[v3x8]
 # asm 1: vmovdqu v3x8,>_3x8=reg256#8
 # asm 2: vmovdqu v3x8,>_3x8=%ymm7
-vmovdqu v3x8,%ymm7
+vmovdqu v3x8(%rip),%ymm7
 
 # qhasm: 8x c = vtmp0 - vtmp3
 # asm 1: vpsubd <vtmp3=reg256#7,<vtmp0=reg256#4,>c=reg256#4

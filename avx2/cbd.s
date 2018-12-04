@@ -71,22 +71,22 @@ sub %r11,%rsp
 # qhasm: _mask1 = mem256[mask1]
 # asm 1: vmovdqu mask1,>_mask1=reg256#1
 # asm 2: vmovdqu mask1,>_mask1=%ymm0
-vmovdqu mask1,%ymm0
+vmovdqu mask1(%rip),%ymm0
 
 # qhasm: _maskffff = mem256[maskffff]
 # asm 1: vmovdqu maskffff,>_maskffff=reg256#2
 # asm 2: vmovdqu maskffff,>_maskffff=%ymm1
-vmovdqu maskffff,%ymm1
+vmovdqu maskffff(%rip),%ymm1
 
 # qhasm: _maskff = mem256[maskff]
 # asm 1: vmovdqu maskff,>_maskff=reg256#3
 # asm 2: vmovdqu maskff,>_maskff=%ymm2
-vmovdqu maskff,%ymm2
+vmovdqu maskff(%rip),%ymm2
 
 # qhasm: _q8x  = mem256[q8x]
 # asm 1: vmovdqu q8x,>_q8x=reg256#4
 # asm 2: vmovdqu q8x,>_q8x=%ymm3
-vmovdqu q8x,%ymm3
+vmovdqu q8x(%rip),%ymm3
 
 # qhasm: ctr = 128
 # asm 1: mov  $128,>ctr=int64#3
