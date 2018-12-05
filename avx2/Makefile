@@ -6,7 +6,7 @@ GCCFLAGS = -O3 -fomit-frame-pointer -mavx2 -march=corei7-avx
 
 
 HEADERS = crypto_stream_chacha20.h params.h poly.h randombytes.h ntt.h error_correction.h crypto_hash_sha256.h  fips202.h crypto_stream_aes256ctr.h
-CFILES  = crypto_stream_chacha20.c poly.c precomp.c error_correction.c newhope.c crypto_hash_sha256.c chacha.S cbd.s consts.c fips202.c omegas.c ntt_double.s bitrev.s crypto_stream_aes256ctr.s hr.s rec.s poly_pointwise.s
+CFILES  = crypto_stream_chacha20.c poly.c precomp.c error_correction.c newhope.c crypto_hash_sha256.c chacha.S cbd.s consts.s fips202.c omegas.c ntt_double.s bitrev.s crypto_stream_aes256ctr.s hr.s rec.s poly_pointwise.s
 
 all:	test/test_newhope \
 			test/speed  \
