@@ -2,7 +2,7 @@ CC = /usr/bin/clang
 CFLAGS = -g -Wall -Wextra -O3 -fomit-frame-pointer -march=native
 
 GCC = /usr/bin/gcc
-GCCFLAGS = -O3 -fomit-frame-pointer -msse2avx -mavx2 -march=corei7-avx
+GCCFLAGS = -O3 -fomit-frame-pointer -mavx2 -march=corei7-avx
 
 
 HEADERS = crypto_stream_chacha20.h params.h poly.h randombytes.h ntt.h error_correction.h crypto_hash_sha256.h  fips202.h crypto_stream_aes256ctr.h batcher.h
@@ -34,6 +34,7 @@ crypto_stream_aes256ctr.s: crypto_stream_aes256ctr.c
 
 clean:
 	-rm *.o
+	-rm crypto_stream_aes256ctr.s
 	-rm test/test_newhope	
 	-rm test/test_statistical
 	-rm test/speed
