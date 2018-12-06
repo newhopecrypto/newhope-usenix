@@ -1,5 +1,5 @@
 CC = /usr/bin/gcc
-CFLAGS = -Wall -Wextra -O3 -fomit-frame-pointer -msse2avx -mavx2 -march=corei7-avx
+CFLAGS = -Wall -Wextra -O3 -fomit-frame-pointer -mavx2 -march=corei7-avx
 
 HEADERS = crypto_stream_chacha20.h params.h poly.h randombytes.h ntt.h error_correction.h reduce.h
 CFILES  = crypto_stream_chacha20.c poly.c ntt.c precomp.c error_correction.c newhope.c reduce.c fips202.c
